@@ -11,7 +11,6 @@ double DISPATCHER::storage_needed(std::unordered_map<std::string, long long>& fi
 void DISPATCHER::findBestSite(Job* j)
 {
   
-  //j->comp_site = "Site0"; return;
   const auto& files = j->input_files_sizes_locations;
   const auto needed = storage_needed(j->output_files);
   
@@ -33,8 +32,7 @@ void DISPATCHER::findBestSite(Job* j)
 void DISPATCHER::findAvailableCPU(Job* j)
 {
     if(j->comp_site == "") return;
-    auto site = sg4::Engine::get_instance()->netzone_by_name_or_null(j->comp_site);
-    auto cpus = site->get_all_hosts();
+    auto cpus = CGSim::get_site_manager()->get_site(j->comp_site)->cpus;
 
     for(const auto& cpu: cpus)
     {
