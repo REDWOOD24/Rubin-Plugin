@@ -1,0 +1,12 @@
+{
+    "Grid_Name": "GRID",
+    "Sites_Information": "site_topology.json",
+    "Sites_Connection_Information": "site_connections.json",
+    "Dispatcher_Plugin": "../plugin/build/libRubinPlugin.dylib",
+    "Limited_Sites": [],
+    "Custom_Parameters":
+    {
+	"jobs_file": "/Users/raekhan/Rubin-Plugin/workload/quantum_graph_100_jobs.json",
+	"output_file": "../output/events.db"
+    }
+}

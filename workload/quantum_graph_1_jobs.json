@@ -1,0 +1,160 @@
+{
+  "schema_version": "0.2",
+  "qgraph": {
+    "instrument": "LSSTCam",
+    "description": "100 workload-manager jobs arranged as a five-stage QuantumGraph",
+    "Num_of_Jobs": 100,
+    "number_of_dependencies": 4,
+    "tasks": [
+      "isr",
+      "characterizeImage",
+      "calibrate",
+      "makeWarp",
+      "assembleCoadd"
+    ]
+  },
+  "jobs": [
+    {
+      "jobid": 1,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10000,
+        "detector": 0,
+        "band": "g"
+      },
+      "cores": 2,
+      "flops": 1096396,
+      "creation_time": 2,
+      "input_files": [
+        "raw_visit_10000_detector_0.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_1_unit_0.root": 1330789834
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 2,
+          "creation_delay": 1,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 2,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10000,
+        "detector": 0,
+        "band": "g"
+      },
+      "cores": 2,
+      "flops": 1306149,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_1_unit_0.root"
+      ],
+      "output_files": {
+        "icExp_job_2_unit_0.root": 1323947539
+      },
+      "parents": [
+        1
+      ],
+      "children": [
+        {
+          "jobid": 3,
+          "creation_delay": 1,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 3,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10000,
+        "detector": 0,
+        "band": "g"
+      },
+      "cores": 3,
+      "flops": 1409514,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_2_unit_0.root"
+      ],
+      "output_files": {
+        "calexp_job_3_unit_0.root": 1601344613
+      },
+      "parents": [
+        2
+      ],
+      "children": [
+        {
+          "jobid": 4,
+          "creation_delay": 2,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 4,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 0,
+        "band": "g"
+      },
+      "cores": 6,
+      "flops": 1657019,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_3_unit_0.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_4_unit_0.root": 2528648674
+      },
+      "parents": [
+        3
+      ],
+      "children": [
+        {
+          "jobid": 5,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 5,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 0,
+        "band": "g"
+      },
+      "cores": 7,
+      "flops": 1911212,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_4_unit_0.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_5_unit_0.root": 3209221216
+      },
+      "parents": [
+        4
+      ],
+      "children": []
+    }
+  ]
+}

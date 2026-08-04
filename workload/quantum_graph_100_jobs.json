@@ -1,0 +1,3117 @@
+{
+  "schema_version": "0.2",
+  "qgraph": {
+    "instrument": "LSSTCam",
+    "description": "100 workload-manager jobs arranged as a five-stage QuantumGraph",
+    "Num_of_Jobs": 100,
+    "number_of_dependencies": 117,
+    "tasks": [
+      "isr",
+      "characterizeImage",
+      "calibrate",
+      "makeWarp",
+      "assembleCoadd"
+    ]
+  },
+  "jobs": [
+    {
+      "jobid": 1,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10000,
+        "detector": 0,
+        "band": "g"
+      },
+      "cores": 2,
+      "flops": 1095745,
+      "creation_time": 9,
+      "input_files": [
+        "raw_visit_10000_detector_0.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_1_unit_0.root": 1336602373
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 21,
+          "creation_delay": 1,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 2,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10001,
+        "detector": 1,
+        "band": "r"
+      },
+      "cores": 1,
+      "flops": 1129309,
+      "creation_time": 16,
+      "input_files": [
+        "raw_visit_10001_detector_1.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_2_unit_1.root": 1053136440
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 22,
+          "creation_delay": 2,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 3,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10002,
+        "detector": 2,
+        "band": "i"
+      },
+      "cores": 2,
+      "flops": 1102532,
+      "creation_time": 15,
+      "input_files": [
+        "raw_visit_10002_detector_2.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_3_unit_2.root": 1194982745
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 23,
+          "creation_delay": 1,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 4,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10003,
+        "detector": 3,
+        "band": "z"
+      },
+      "cores": 1,
+      "flops": 1063074,
+      "creation_time": 15,
+      "input_files": [
+        "raw_visit_10003_detector_3.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_4_unit_3.root": 936863604
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 24,
+          "creation_delay": 2,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 5,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10004,
+        "detector": 4,
+        "band": "y"
+      },
+      "cores": 1,
+      "flops": 1148607,
+      "creation_time": 30,
+      "input_files": [
+        "raw_visit_10004_detector_4.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_5_unit_4.root": 1274163637
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 25,
+          "creation_delay": 3,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 6,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10005,
+        "detector": 5,
+        "band": "g"
+      },
+      "cores": 1,
+      "flops": 1228767,
+      "creation_time": 24,
+      "input_files": [
+        "raw_visit_10005_detector_5.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_6_unit_5.root": 955149240
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 26,
+          "creation_delay": 0,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 7,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10006,
+        "detector": 6,
+        "band": "r"
+      },
+      "cores": 2,
+      "flops": 1034648,
+      "creation_time": 8,
+      "input_files": [
+        "raw_visit_10006_detector_6.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_7_unit_6.root": 1217222939
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 27,
+          "creation_delay": 3,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 8,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10007,
+        "detector": 7,
+        "band": "i"
+      },
+      "cores": 2,
+      "flops": 1223726,
+      "creation_time": 15,
+      "input_files": [
+        "raw_visit_10007_detector_7.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_8_unit_7.root": 1069332174
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 28,
+          "creation_delay": 0,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 9,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10008,
+        "detector": 8,
+        "band": "z"
+      },
+      "cores": 2,
+      "flops": 1269867,
+      "creation_time": 21,
+      "input_files": [
+        "raw_visit_10008_detector_8.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_9_unit_8.root": 1258831619
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 29,
+          "creation_delay": 1,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 10,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10009,
+        "detector": 9,
+        "band": "y"
+      },
+      "cores": 2,
+      "flops": 1289422,
+      "creation_time": 13,
+      "input_files": [
+        "raw_visit_10009_detector_9.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_10_unit_9.root": 1237050666
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 30,
+          "creation_delay": 3,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 11,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10010,
+        "detector": 10,
+        "band": "g"
+      },
+      "cores": 1,
+      "flops": 1148433,
+      "creation_time": 15,
+      "input_files": [
+        "raw_visit_10010_detector_10.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_11_unit_10.root": 1190746318
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 31,
+          "creation_delay": 3,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 12,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10011,
+        "detector": 11,
+        "band": "r"
+      },
+      "cores": 1,
+      "flops": 1025549,
+      "creation_time": 7,
+      "input_files": [
+        "raw_visit_10011_detector_11.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_12_unit_11.root": 1398824495
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 32,
+          "creation_delay": 0,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 13,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10012,
+        "detector": 12,
+        "band": "i"
+      },
+      "cores": 2,
+      "flops": 1271328,
+      "creation_time": 29,
+      "input_files": [
+        "raw_visit_10012_detector_12.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_13_unit_12.root": 1075278266
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 33,
+          "creation_delay": 0,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 14,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10013,
+        "detector": 13,
+        "band": "z"
+      },
+      "cores": 1,
+      "flops": 1106007,
+      "creation_time": 11,
+      "input_files": [
+        "raw_visit_10013_detector_13.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_14_unit_13.root": 1352890640
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 34,
+          "creation_delay": 3,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 15,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10014,
+        "detector": 14,
+        "band": "y"
+      },
+      "cores": 1,
+      "flops": 1234515,
+      "creation_time": 27,
+      "input_files": [
+        "raw_visit_10014_detector_14.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_15_unit_14.root": 1176000836
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 35,
+          "creation_delay": 1,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 16,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10015,
+        "detector": 15,
+        "band": "g"
+      },
+      "cores": 2,
+      "flops": 1128543,
+      "creation_time": 30,
+      "input_files": [
+        "raw_visit_10015_detector_15.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_16_unit_15.root": 964850329
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 36,
+          "creation_delay": 0,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 17,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10016,
+        "detector": 16,
+        "band": "r"
+      },
+      "cores": 1,
+      "flops": 1219647,
+      "creation_time": 10,
+      "input_files": [
+        "raw_visit_10016_detector_16.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_17_unit_16.root": 952128847
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 37,
+          "creation_delay": 0,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 18,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10017,
+        "detector": 17,
+        "band": "i"
+      },
+      "cores": 1,
+      "flops": 1015353,
+      "creation_time": 9,
+      "input_files": [
+        "raw_visit_10017_detector_17.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_18_unit_17.root": 1191535424
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 38,
+          "creation_delay": 2,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 19,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10018,
+        "detector": 18,
+        "band": "z"
+      },
+      "cores": 2,
+      "flops": 1210064,
+      "creation_time": 1,
+      "input_files": [
+        "raw_visit_10018_detector_18.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_19_unit_18.root": 1263850587
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 39,
+          "creation_delay": 1,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 20,
+      "task": "isr",
+      "resource_key": "isr:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10019,
+        "detector": 19,
+        "band": "y"
+      },
+      "cores": 1,
+      "flops": 1129804,
+      "creation_time": 0,
+      "input_files": [
+        "raw_visit_10019_detector_19.fits"
+      ],
+      "output_files": {
+        "postISRCCD_job_20_unit_19.root": 1017534588
+      },
+      "parents": [],
+      "children": [
+        {
+          "jobid": 40,
+          "creation_delay": 2,
+          "dataset_type": "postISRCCD"
+        }
+      ]
+    },
+    {
+      "jobid": 21,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10000,
+        "detector": 0,
+        "band": "g"
+      },
+      "cores": 3,
+      "flops": 1408026,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_1_unit_0.root"
+      ],
+      "output_files": {
+        "icExp_job_21_unit_0.root": 1099372044
+      },
+      "parents": [
+        1
+      ],
+      "children": [
+        {
+          "jobid": 41,
+          "creation_delay": 1,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 22,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10001,
+        "detector": 1,
+        "band": "r"
+      },
+      "cores": 2,
+      "flops": 1227329,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_2_unit_1.root"
+      ],
+      "output_files": {
+        "icExp_job_22_unit_1.root": 1397499627
+      },
+      "parents": [
+        2
+      ],
+      "children": [
+        {
+          "jobid": 42,
+          "creation_delay": 2,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 23,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10002,
+        "detector": 2,
+        "band": "i"
+      },
+      "cores": 4,
+      "flops": 1339197,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_3_unit_2.root"
+      ],
+      "output_files": {
+        "icExp_job_23_unit_2.root": 1084412477
+      },
+      "parents": [
+        3
+      ],
+      "children": [
+        {
+          "jobid": 43,
+          "creation_delay": 0,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 24,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10003,
+        "detector": 3,
+        "band": "z"
+      },
+      "cores": 2,
+      "flops": 1317568,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_4_unit_3.root"
+      ],
+      "output_files": {
+        "icExp_job_24_unit_3.root": 1063826295
+      },
+      "parents": [
+        4
+      ],
+      "children": [
+        {
+          "jobid": 44,
+          "creation_delay": 0,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 25,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10004,
+        "detector": 4,
+        "band": "y"
+      },
+      "cores": 1,
+      "flops": 1230366,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_5_unit_4.root"
+      ],
+      "output_files": {
+        "icExp_job_25_unit_4.root": 1319788833
+      },
+      "parents": [
+        5
+      ],
+      "children": [
+        {
+          "jobid": 45,
+          "creation_delay": 1,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 26,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10005,
+        "detector": 5,
+        "band": "g"
+      },
+      "cores": 3,
+      "flops": 1284387,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_6_unit_5.root"
+      ],
+      "output_files": {
+        "icExp_job_26_unit_5.root": 1036511397
+      },
+      "parents": [
+        6
+      ],
+      "children": [
+        {
+          "jobid": 46,
+          "creation_delay": 0,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 27,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10006,
+        "detector": 6,
+        "band": "r"
+      },
+      "cores": 4,
+      "flops": 1409744,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_7_unit_6.root"
+      ],
+      "output_files": {
+        "icExp_job_27_unit_6.root": 1445286587
+      },
+      "parents": [
+        7
+      ],
+      "children": [
+        {
+          "jobid": 47,
+          "creation_delay": 1,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 28,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10007,
+        "detector": 7,
+        "band": "i"
+      },
+      "cores": 4,
+      "flops": 1364319,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_8_unit_7.root"
+      ],
+      "output_files": {
+        "icExp_job_28_unit_7.root": 1236039040
+      },
+      "parents": [
+        8
+      ],
+      "children": [
+        {
+          "jobid": 48,
+          "creation_delay": 2,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 29,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10008,
+        "detector": 8,
+        "band": "z"
+      },
+      "cores": 3,
+      "flops": 1390454,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_9_unit_8.root"
+      ],
+      "output_files": {
+        "icExp_job_29_unit_8.root": 1113213553
+      },
+      "parents": [
+        9
+      ],
+      "children": [
+        {
+          "jobid": 49,
+          "creation_delay": 3,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 30,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10009,
+        "detector": 9,
+        "band": "y"
+      },
+      "cores": 4,
+      "flops": 1237756,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_10_unit_9.root"
+      ],
+      "output_files": {
+        "icExp_job_30_unit_9.root": 1026639381
+      },
+      "parents": [
+        10
+      ],
+      "children": [
+        {
+          "jobid": 50,
+          "creation_delay": 3,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 31,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10010,
+        "detector": 10,
+        "band": "g"
+      },
+      "cores": 4,
+      "flops": 1388193,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_11_unit_10.root"
+      ],
+      "output_files": {
+        "icExp_job_31_unit_10.root": 1560260278
+      },
+      "parents": [
+        11
+      ],
+      "children": [
+        {
+          "jobid": 51,
+          "creation_delay": 3,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 32,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10011,
+        "detector": 11,
+        "band": "r"
+      },
+      "cores": 3,
+      "flops": 1498059,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_12_unit_11.root"
+      ],
+      "output_files": {
+        "icExp_job_32_unit_11.root": 1119486235
+      },
+      "parents": [
+        12
+      ],
+      "children": [
+        {
+          "jobid": 52,
+          "creation_delay": 3,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 33,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10012,
+        "detector": 12,
+        "band": "i"
+      },
+      "cores": 1,
+      "flops": 1269305,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_13_unit_12.root"
+      ],
+      "output_files": {
+        "icExp_job_33_unit_12.root": 1334961232
+      },
+      "parents": [
+        13
+      ],
+      "children": [
+        {
+          "jobid": 53,
+          "creation_delay": 2,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 34,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10013,
+        "detector": 13,
+        "band": "z"
+      },
+      "cores": 2,
+      "flops": 1335633,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_14_unit_13.root"
+      ],
+      "output_files": {
+        "icExp_job_34_unit_13.root": 1110284308
+      },
+      "parents": [
+        14
+      ],
+      "children": [
+        {
+          "jobid": 54,
+          "creation_delay": 2,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 35,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10014,
+        "detector": 14,
+        "band": "y"
+      },
+      "cores": 1,
+      "flops": 1258910,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_15_unit_14.root"
+      ],
+      "output_files": {
+        "icExp_job_35_unit_14.root": 1522640270
+      },
+      "parents": [
+        15
+      ],
+      "children": [
+        {
+          "jobid": 55,
+          "creation_delay": 0,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 36,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10015,
+        "detector": 15,
+        "band": "g"
+      },
+      "cores": 4,
+      "flops": 1305507,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_16_unit_15.root"
+      ],
+      "output_files": {
+        "icExp_job_36_unit_15.root": 1244254703
+      },
+      "parents": [
+        16
+      ],
+      "children": [
+        {
+          "jobid": 56,
+          "creation_delay": 1,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 37,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10016,
+        "detector": 16,
+        "band": "r"
+      },
+      "cores": 3,
+      "flops": 1394836,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_17_unit_16.root"
+      ],
+      "output_files": {
+        "icExp_job_37_unit_16.root": 1454332599
+      },
+      "parents": [
+        17
+      ],
+      "children": [
+        {
+          "jobid": 57,
+          "creation_delay": 3,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 38,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10017,
+        "detector": 17,
+        "band": "i"
+      },
+      "cores": 3,
+      "flops": 1418441,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_18_unit_17.root"
+      ],
+      "output_files": {
+        "icExp_job_38_unit_17.root": 1237121899
+      },
+      "parents": [
+        18
+      ],
+      "children": [
+        {
+          "jobid": 58,
+          "creation_delay": 2,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 39,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10018,
+        "detector": 18,
+        "band": "z"
+      },
+      "cores": 1,
+      "flops": 1434194,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_19_unit_18.root"
+      ],
+      "output_files": {
+        "icExp_job_39_unit_18.root": 1440460796
+      },
+      "parents": [
+        19
+      ],
+      "children": [
+        {
+          "jobid": 59,
+          "creation_delay": 1,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 40,
+      "task": "characterizeImage",
+      "resource_key": "characterizeImage:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10019,
+        "detector": 19,
+        "band": "y"
+      },
+      "cores": 3,
+      "flops": 1217920,
+      "creation_time": null,
+      "input_files": [
+        "postISRCCD_job_20_unit_19.root"
+      ],
+      "output_files": {
+        "icExp_job_40_unit_19.root": 1437423642
+      },
+      "parents": [
+        20
+      ],
+      "children": [
+        {
+          "jobid": 60,
+          "creation_delay": 3,
+          "dataset_type": "icExp"
+        }
+      ]
+    },
+    {
+      "jobid": 41,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10000,
+        "detector": 0,
+        "band": "g"
+      },
+      "cores": 1,
+      "flops": 1592046,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_21_unit_0.root"
+      ],
+      "output_files": {
+        "calexp_job_41_unit_0.root": 1494821013
+      },
+      "parents": [
+        21
+      ],
+      "children": [
+        {
+          "jobid": 61,
+          "creation_delay": 2,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 42,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10001,
+        "detector": 1,
+        "band": "r"
+      },
+      "cores": 4,
+      "flops": 1439643,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_22_unit_1.root"
+      ],
+      "output_files": {
+        "calexp_job_42_unit_1.root": 1801767044
+      },
+      "parents": [
+        22
+      ],
+      "children": [
+        {
+          "jobid": 62,
+          "creation_delay": 2,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 43,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10002,
+        "detector": 2,
+        "band": "i"
+      },
+      "cores": 3,
+      "flops": 1514554,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_23_unit_2.root"
+      ],
+      "output_files": {
+        "calexp_job_43_unit_2.root": 1202158971
+      },
+      "parents": [
+        23
+      ],
+      "children": [
+        {
+          "jobid": 63,
+          "creation_delay": 1,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 44,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10003,
+        "detector": 3,
+        "band": "z"
+      },
+      "cores": 2,
+      "flops": 1637731,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_24_unit_3.root"
+      ],
+      "output_files": {
+        "calexp_job_44_unit_3.root": 1281024226
+      },
+      "parents": [
+        24
+      ],
+      "children": [
+        {
+          "jobid": 64,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 45,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10004,
+        "detector": 4,
+        "band": "y"
+      },
+      "cores": 4,
+      "flops": 1578816,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_25_unit_4.root"
+      ],
+      "output_files": {
+        "calexp_job_45_unit_4.root": 1213963357
+      },
+      "parents": [
+        25
+      ],
+      "children": [
+        {
+          "jobid": 65,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 46,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10005,
+        "detector": 5,
+        "band": "g"
+      },
+      "cores": 4,
+      "flops": 1686400,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_26_unit_5.root"
+      ],
+      "output_files": {
+        "calexp_job_46_unit_5.root": 1269639021
+      },
+      "parents": [
+        26
+      ],
+      "children": [
+        {
+          "jobid": 66,
+          "creation_delay": 3,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 47,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10006,
+        "detector": 6,
+        "band": "r"
+      },
+      "cores": 3,
+      "flops": 1694665,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_27_unit_6.root"
+      ],
+      "output_files": {
+        "calexp_job_47_unit_6.root": 1841780119
+      },
+      "parents": [
+        27
+      ],
+      "children": [
+        {
+          "jobid": 67,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 48,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10007,
+        "detector": 7,
+        "band": "i"
+      },
+      "cores": 1,
+      "flops": 1644025,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_28_unit_7.root"
+      ],
+      "output_files": {
+        "calexp_job_48_unit_7.root": 1694848285
+      },
+      "parents": [
+        28
+      ],
+      "children": [
+        {
+          "jobid": 68,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 49,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10008,
+        "detector": 8,
+        "band": "z"
+      },
+      "cores": 3,
+      "flops": 1613659,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_29_unit_8.root"
+      ],
+      "output_files": {
+        "calexp_job_49_unit_8.root": 1652025264
+      },
+      "parents": [
+        29
+      ],
+      "children": [
+        {
+          "jobid": 69,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 50,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10009,
+        "detector": 9,
+        "band": "y"
+      },
+      "cores": 2,
+      "flops": 1513909,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_30_unit_9.root"
+      ],
+      "output_files": {
+        "calexp_job_50_unit_9.root": 1655082620
+      },
+      "parents": [
+        30
+      ],
+      "children": [
+        {
+          "jobid": 70,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 51,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10010,
+        "detector": 10,
+        "band": "g"
+      },
+      "cores": 3,
+      "flops": 1517990,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_31_unit_10.root"
+      ],
+      "output_files": {
+        "calexp_job_51_unit_10.root": 1339530553
+      },
+      "parents": [
+        31
+      ],
+      "children": [
+        {
+          "jobid": 71,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 52,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10011,
+        "detector": 11,
+        "band": "r"
+      },
+      "cores": 3,
+      "flops": 1504583,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_32_unit_11.root"
+      ],
+      "output_files": {
+        "calexp_job_52_unit_11.root": 1457315360
+      },
+      "parents": [
+        32
+      ],
+      "children": [
+        {
+          "jobid": 72,
+          "creation_delay": 1,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 53,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10012,
+        "detector": 12,
+        "band": "i"
+      },
+      "cores": 3,
+      "flops": 1527634,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_33_unit_12.root"
+      ],
+      "output_files": {
+        "calexp_job_53_unit_12.root": 1642390160
+      },
+      "parents": [
+        33
+      ],
+      "children": [
+        {
+          "jobid": 73,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 54,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10013,
+        "detector": 13,
+        "band": "z"
+      },
+      "cores": 4,
+      "flops": 1471836,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_34_unit_13.root"
+      ],
+      "output_files": {
+        "calexp_job_54_unit_13.root": 1562640635
+      },
+      "parents": [
+        34
+      ],
+      "children": [
+        {
+          "jobid": 74,
+          "creation_delay": 3,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 55,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10014,
+        "detector": 14,
+        "band": "y"
+      },
+      "cores": 2,
+      "flops": 1443365,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_35_unit_14.root"
+      ],
+      "output_files": {
+        "calexp_job_55_unit_14.root": 1729029411
+      },
+      "parents": [
+        35
+      ],
+      "children": [
+        {
+          "jobid": 75,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 56,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10015,
+        "detector": 15,
+        "band": "g"
+      },
+      "cores": 1,
+      "flops": 1619515,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_36_unit_15.root"
+      ],
+      "output_files": {
+        "calexp_job_56_unit_15.root": 1561925993
+      },
+      "parents": [
+        36
+      ],
+      "children": [
+        {
+          "jobid": 76,
+          "creation_delay": 1,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 57,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10016,
+        "detector": 16,
+        "band": "r"
+      },
+      "cores": 2,
+      "flops": 1622356,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_37_unit_16.root"
+      ],
+      "output_files": {
+        "calexp_job_57_unit_16.root": 1785494498
+      },
+      "parents": [
+        37
+      ],
+      "children": [
+        {
+          "jobid": 77,
+          "creation_delay": 2,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 58,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10017,
+        "detector": 17,
+        "band": "i"
+      },
+      "cores": 2,
+      "flops": 1421738,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_38_unit_17.root"
+      ],
+      "output_files": {
+        "calexp_job_58_unit_17.root": 1530685654
+      },
+      "parents": [
+        38
+      ],
+      "children": [
+        {
+          "jobid": 78,
+          "creation_delay": 2,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 59,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10018,
+        "detector": 18,
+        "band": "z"
+      },
+      "cores": 1,
+      "flops": 1642488,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_39_unit_18.root"
+      ],
+      "output_files": {
+        "calexp_job_59_unit_18.root": 1580546018
+      },
+      "parents": [
+        39
+      ],
+      "children": [
+        {
+          "jobid": 79,
+          "creation_delay": 1,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 60,
+      "task": "calibrate",
+      "resource_key": "calibrate:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "visit": 10019,
+        "detector": 19,
+        "band": "y"
+      },
+      "cores": 1,
+      "flops": 1527142,
+      "creation_time": null,
+      "input_files": [
+        "icExp_job_40_unit_19.root"
+      ],
+      "output_files": {
+        "calexp_job_60_unit_19.root": 1854987502
+      },
+      "parents": [
+        40
+      ],
+      "children": [
+        {
+          "jobid": 80,
+          "creation_delay": 0,
+          "dataset_type": "calexp"
+        }
+      ]
+    },
+    {
+      "jobid": 61,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 0,
+        "band": "g"
+      },
+      "cores": 5,
+      "flops": 1676137,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_41_unit_0.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_61_unit_0.root": 2396465748
+      },
+      "parents": [
+        41
+      ],
+      "children": [
+        {
+          "jobid": 81,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 82,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 83,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 62,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 1,
+        "band": "r"
+      },
+      "cores": 5,
+      "flops": 1841789,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_42_unit_1.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_62_unit_1.root": 2233614020
+      },
+      "parents": [
+        42
+      ],
+      "children": [
+        {
+          "jobid": 82,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 83,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 84,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 63,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 2,
+        "band": "i"
+      },
+      "cores": 3,
+      "flops": 1768615,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_43_unit_2.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_63_unit_2.root": 2069756046
+      },
+      "parents": [
+        43
+      ],
+      "children": [
+        {
+          "jobid": 83,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 84,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 85,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 64,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 3,
+        "band": "z"
+      },
+      "cores": 6,
+      "flops": 1674290,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_44_unit_3.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_64_unit_3.root": 2177256899
+      },
+      "parents": [
+        44
+      ],
+      "children": [
+        {
+          "jobid": 84,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 85,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 86,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 65,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 4,
+        "band": "y"
+      },
+      "cores": 3,
+      "flops": 1635326,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_45_unit_4.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_65_unit_4.root": 2505380635
+      },
+      "parents": [
+        45
+      ],
+      "children": [
+        {
+          "jobid": 85,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 86,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 87,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 66,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 5,
+        "band": "g"
+      },
+      "cores": 6,
+      "flops": 1859710,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_46_unit_5.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_66_unit_5.root": 2555168750
+      },
+      "parents": [
+        46
+      ],
+      "children": [
+        {
+          "jobid": 86,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 87,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 88,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 67,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 6,
+        "band": "r"
+      },
+      "cores": 6,
+      "flops": 1627854,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_47_unit_6.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_67_unit_6.root": 2509622467
+      },
+      "parents": [
+        47
+      ],
+      "children": [
+        {
+          "jobid": 87,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 88,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 89,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 68,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 7,
+        "band": "i"
+      },
+      "cores": 6,
+      "flops": 1604317,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_48_unit_7.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_68_unit_7.root": 2171460848
+      },
+      "parents": [
+        48
+      ],
+      "children": [
+        {
+          "jobid": 88,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 89,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 90,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 69,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 8,
+        "band": "z"
+      },
+      "cores": 6,
+      "flops": 1724786,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_49_unit_8.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_69_unit_8.root": 2466366905
+      },
+      "parents": [
+        49
+      ],
+      "children": [
+        {
+          "jobid": 89,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 90,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 91,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 70,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 9,
+        "band": "y"
+      },
+      "cores": 6,
+      "flops": 1663950,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_50_unit_9.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_70_unit_9.root": 1996078961
+      },
+      "parents": [
+        50
+      ],
+      "children": [
+        {
+          "jobid": 90,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 91,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 92,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 71,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 10,
+        "band": "g"
+      },
+      "cores": 5,
+      "flops": 1715128,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_51_unit_10.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_71_unit_10.root": 1901065899
+      },
+      "parents": [
+        51
+      ],
+      "children": [
+        {
+          "jobid": 91,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 92,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 93,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 72,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 11,
+        "band": "r"
+      },
+      "cores": 5,
+      "flops": 1829773,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_52_unit_11.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_72_unit_11.root": 2686874698
+      },
+      "parents": [
+        52
+      ],
+      "children": [
+        {
+          "jobid": 92,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 93,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 94,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 73,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 12,
+        "band": "i"
+      },
+      "cores": 2,
+      "flops": 1779672,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_53_unit_12.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_73_unit_12.root": 2548553702
+      },
+      "parents": [
+        53
+      ],
+      "children": [
+        {
+          "jobid": 93,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 94,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 95,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 74,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 13,
+        "band": "z"
+      },
+      "cores": 4,
+      "flops": 1821951,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_54_unit_13.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_74_unit_13.root": 2210245975
+      },
+      "parents": [
+        54
+      ],
+      "children": [
+        {
+          "jobid": 94,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 95,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 96,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 75,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 14,
+        "band": "y"
+      },
+      "cores": 3,
+      "flops": 1736416,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_55_unit_14.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_75_unit_14.root": 1848246804
+      },
+      "parents": [
+        55
+      ],
+      "children": [
+        {
+          "jobid": 95,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 96,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 97,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 76,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 15,
+        "band": "g"
+      },
+      "cores": 2,
+      "flops": 1639537,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_56_unit_15.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_76_unit_15.root": 1963826106
+      },
+      "parents": [
+        56
+      ],
+      "children": [
+        {
+          "jobid": 96,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 97,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 98,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 77,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 16,
+        "band": "r"
+      },
+      "cores": 2,
+      "flops": 1724815,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_57_unit_16.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_77_unit_16.root": 2714030598
+      },
+      "parents": [
+        57
+      ],
+      "children": [
+        {
+          "jobid": 97,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 98,
+          "creation_delay": 2,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 99,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 78,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 17,
+        "band": "i"
+      },
+      "cores": 6,
+      "flops": 1624939,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_58_unit_17.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_78_unit_17.root": 1818113029
+      },
+      "parents": [
+        58
+      ],
+      "children": [
+        {
+          "jobid": 98,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 99,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 100,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 79,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 18,
+        "band": "z"
+      },
+      "cores": 5,
+      "flops": 1630373,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_59_unit_18.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_79_unit_18.root": 1871061917
+      },
+      "parents": [
+        59
+      ],
+      "children": [
+        {
+          "jobid": 99,
+          "creation_delay": 1,
+          "dataset_type": "deepCoadd_directWarp"
+        },
+        {
+          "jobid": 100,
+          "creation_delay": 3,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 80,
+      "task": "makeWarp",
+      "resource_key": "makeWarp:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 19,
+        "band": "y"
+      },
+      "cores": 6,
+      "flops": 1881456,
+      "creation_time": null,
+      "input_files": [
+        "calexp_job_60_unit_19.root"
+      ],
+      "output_files": {
+        "deepCoadd_directWarp_job_80_unit_19.root": 1914336202
+      },
+      "parents": [
+        60
+      ],
+      "children": [
+        {
+          "jobid": 100,
+          "creation_delay": 0,
+          "dataset_type": "deepCoadd_directWarp"
+        }
+      ]
+    },
+    {
+      "jobid": 81,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 0,
+        "band": "g"
+      },
+      "cores": 6,
+      "flops": 1882658,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_61_unit_0.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_81_unit_0.root": 2997967808
+      },
+      "parents": [
+        61
+      ],
+      "children": []
+    },
+    {
+      "jobid": 82,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 1,
+        "band": "r"
+      },
+      "cores": 6,
+      "flops": 1800380,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_61_unit_0.root",
+        "deepCoadd_directWarp_job_62_unit_1.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_82_unit_1.root": 2661320733
+      },
+      "parents": [
+        61,
+        62
+      ],
+      "children": []
+    },
+    {
+      "jobid": 83,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 2,
+        "band": "i"
+      },
+      "cores": 2,
+      "flops": 1868787,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_61_unit_0.root",
+        "deepCoadd_directWarp_job_62_unit_1.root",
+        "deepCoadd_directWarp_job_63_unit_2.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_83_unit_2.root": 2513300331
+      },
+      "parents": [
+        61,
+        62,
+        63
+      ],
+      "children": []
+    },
+    {
+      "jobid": 84,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 3,
+        "band": "z"
+      },
+      "cores": 8,
+      "flops": 1896513,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_62_unit_1.root",
+        "deepCoadd_directWarp_job_63_unit_2.root",
+        "deepCoadd_directWarp_job_64_unit_3.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_84_unit_3.root": 2698895437
+      },
+      "parents": [
+        62,
+        63,
+        64
+      ],
+      "children": []
+    },
+    {
+      "jobid": 85,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 4,
+        "band": "y"
+      },
+      "cores": 7,
+      "flops": 1850067,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_63_unit_2.root",
+        "deepCoadd_directWarp_job_64_unit_3.root",
+        "deepCoadd_directWarp_job_65_unit_4.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_85_unit_4.root": 2897435369
+      },
+      "parents": [
+        63,
+        64,
+        65
+      ],
+      "children": []
+    },
+    {
+      "jobid": 86,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 5,
+        "band": "g"
+      },
+      "cores": 3,
+      "flops": 1864839,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_64_unit_3.root",
+        "deepCoadd_directWarp_job_65_unit_4.root",
+        "deepCoadd_directWarp_job_66_unit_5.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_86_unit_5.root": 3935704007
+      },
+      "parents": [
+        64,
+        65,
+        66
+      ],
+      "children": []
+    },
+    {
+      "jobid": 87,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 6,
+        "band": "r"
+      },
+      "cores": 3,
+      "flops": 1903695,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_65_unit_4.root",
+        "deepCoadd_directWarp_job_66_unit_5.root",
+        "deepCoadd_directWarp_job_67_unit_6.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_87_unit_6.root": 3057038357
+      },
+      "parents": [
+        65,
+        66,
+        67
+      ],
+      "children": []
+    },
+    {
+      "jobid": 88,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 7,
+        "band": "i"
+      },
+      "cores": 7,
+      "flops": 1869874,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_66_unit_5.root",
+        "deepCoadd_directWarp_job_67_unit_6.root",
+        "deepCoadd_directWarp_job_68_unit_7.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_88_unit_7.root": 3318673405
+      },
+      "parents": [
+        66,
+        67,
+        68
+      ],
+      "children": []
+    },
+    {
+      "jobid": 89,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 8,
+        "band": "z"
+      },
+      "cores": 2,
+      "flops": 1992470,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_67_unit_6.root",
+        "deepCoadd_directWarp_job_68_unit_7.root",
+        "deepCoadd_directWarp_job_69_unit_8.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_89_unit_8.root": 3046934428
+      },
+      "parents": [
+        67,
+        68,
+        69
+      ],
+      "children": []
+    },
+    {
+      "jobid": 90,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 9,
+        "band": "y"
+      },
+      "cores": 2,
+      "flops": 1845606,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_68_unit_7.root",
+        "deepCoadd_directWarp_job_69_unit_8.root",
+        "deepCoadd_directWarp_job_70_unit_9.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_90_unit_9.root": 3039368757
+      },
+      "parents": [
+        68,
+        69,
+        70
+      ],
+      "children": []
+    },
+    {
+      "jobid": 91,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 10,
+        "band": "g"
+      },
+      "cores": 7,
+      "flops": 1961440,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_69_unit_8.root",
+        "deepCoadd_directWarp_job_70_unit_9.root",
+        "deepCoadd_directWarp_job_71_unit_10.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_91_unit_10.root": 3633632935
+      },
+      "parents": [
+        69,
+        70,
+        71
+      ],
+      "children": []
+    },
+    {
+      "jobid": 92,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 11,
+        "band": "r"
+      },
+      "cores": 2,
+      "flops": 1913159,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_70_unit_9.root",
+        "deepCoadd_directWarp_job_71_unit_10.root",
+        "deepCoadd_directWarp_job_72_unit_11.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_92_unit_11.root": 2553430928
+      },
+      "parents": [
+        70,
+        71,
+        72
+      ],
+      "children": []
+    },
+    {
+      "jobid": 93,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 12,
+        "band": "i"
+      },
+      "cores": 4,
+      "flops": 1981447,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_71_unit_10.root",
+        "deepCoadd_directWarp_job_72_unit_11.root",
+        "deepCoadd_directWarp_job_73_unit_12.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_93_unit_12.root": 3513210925
+      },
+      "parents": [
+        71,
+        72,
+        73
+      ],
+      "children": []
+    },
+    {
+      "jobid": 94,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 13,
+        "band": "z"
+      },
+      "cores": 8,
+      "flops": 1922015,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_72_unit_11.root",
+        "deepCoadd_directWarp_job_73_unit_12.root",
+        "deepCoadd_directWarp_job_74_unit_13.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_94_unit_13.root": 2652046175
+      },
+      "parents": [
+        72,
+        73,
+        74
+      ],
+      "children": []
+    },
+    {
+      "jobid": 95,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 14,
+        "band": "y"
+      },
+      "cores": 8,
+      "flops": 1942951,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_73_unit_12.root",
+        "deepCoadd_directWarp_job_74_unit_13.root",
+        "deepCoadd_directWarp_job_75_unit_14.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_95_unit_14.root": 2521180693
+      },
+      "parents": [
+        73,
+        74,
+        75
+      ],
+      "children": []
+    },
+    {
+      "jobid": 96,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 15,
+        "band": "g"
+      },
+      "cores": 7,
+      "flops": 1908813,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_74_unit_13.root",
+        "deepCoadd_directWarp_job_75_unit_14.root",
+        "deepCoadd_directWarp_job_76_unit_15.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_96_unit_15.root": 3037233588
+      },
+      "parents": [
+        74,
+        75,
+        76
+      ],
+      "children": []
+    },
+    {
+      "jobid": 97,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 16,
+        "band": "r"
+      },
+      "cores": 4,
+      "flops": 1966712,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_75_unit_14.root",
+        "deepCoadd_directWarp_job_76_unit_15.root",
+        "deepCoadd_directWarp_job_77_unit_16.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_97_unit_16.root": 3360412718
+      },
+      "parents": [
+        75,
+        76,
+        77
+      ],
+      "children": []
+    },
+    {
+      "jobid": 98,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 17,
+        "band": "i"
+      },
+      "cores": 5,
+      "flops": 1891570,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_76_unit_15.root",
+        "deepCoadd_directWarp_job_77_unit_16.root",
+        "deepCoadd_directWarp_job_78_unit_17.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_98_unit_17.root": 3927963065
+      },
+      "parents": [
+        76,
+        77,
+        78
+      ],
+      "children": []
+    },
+    {
+      "jobid": 99,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 18,
+        "band": "z"
+      },
+      "cores": 5,
+      "flops": 1940899,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_77_unit_16.root",
+        "deepCoadd_directWarp_job_78_unit_17.root",
+        "deepCoadd_directWarp_job_79_unit_18.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_99_unit_18.root": 3501729249
+      },
+      "parents": [
+        77,
+        78,
+        79
+      ],
+      "children": []
+    },
+    {
+      "jobid": 100,
+      "task": "assembleCoadd",
+      "resource_key": "assembleCoadd:LSSTCam",
+      "data_id": {
+        "instrument": "LSSTCam",
+        "tract": 2000,
+        "patch": 19,
+        "band": "y"
+      },
+      "cores": 6,
+      "flops": 1819569,
+      "creation_time": null,
+      "input_files": [
+        "deepCoadd_directWarp_job_78_unit_17.root",
+        "deepCoadd_directWarp_job_79_unit_18.root",
+        "deepCoadd_directWarp_job_80_unit_19.root"
+      ],
+      "output_files": {
+        "deepCoadd_job_100_unit_19.root": 3836382263
+      },
+      "parents": [
+        78,
+        79,
+        80
+      ],
+      "children": []
+    }
+  ]
+}
