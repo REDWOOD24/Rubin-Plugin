@@ -15,6 +15,8 @@ A C++17 dispatcher plugin for [CGSim](https://github.com/REDWOOD24/CGSim) that s
 - `nlohmann/json`
 - Python 3 and Graphviz are optional for regenerating inputs and plotting workload DAGs.
 
+> 🚨 **IMPORTANT** Currently only works with [CGSim DAG Dependencies Branch](https://github.com/REDWOOD24/CGSim/tree/dag_dependencies)
+
 ## Build
 
 Build and install CGSim first, then build the plugin:
