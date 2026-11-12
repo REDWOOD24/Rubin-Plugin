@@ -23,7 +23,7 @@ find_package(SQLite3   REQUIRED)
 
 
 #Link libraries and Include Directories
-target_link_libraries ( RubinPlugin PUBLIC ${SimGrid_LIBRARY} ${Boost_LIBRARIES} CGSim::CGSim SQLite::SQLite3)
+target_link_libraries ( RubinPlugin PUBLIC ${SimGrid_LIBRARY} ${Boost_LIBRARIES} CGSim::CGSim SQLite3::SQLite3)
 target_include_directories( RubinPlugin PUBLIC ${SimGrid_INCLUDE_DIR} ${CGSim_INCLUDE_DIR} ${Boost_INCLUDE_DIR})
 
 
